@@ -127,6 +127,7 @@
         <elasticsearch6.client.version>6.3.1</elasticsearch6.client.version>
         <elasticsearch7.client.version>7.5.1</elasticsearch7.client.version>
         <flink-shaded-hadoop-2.version>2.7.5-7.0</flink-shaded-hadoop-2.version>
+        <flink-shaded-hadoop-3.version>3.1.1.7.0.3.0-79-7.0</flink-shaded-hadoop-3.version>
         <parquet-avro.version>1.10.0</parquet-avro.version>
         <elasticsearch-spark.version>6.8.3</elasticsearch-spark.version>
         <clickhouse-jdbc.version>0.2</clickhouse-jdbc.version>
@@ -328,6 +329,17 @@
                 <groupId>org.apache.flink</groupId>
                 <artifactId>flink-shaded-hadoop-2</artifactId>
                 <version>${flink-shaded-hadoop-2.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>xml-apis</groupId>
+                        <artifactId>xml-apis</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-shaded-hadoop-3</artifactId>
+                <version>${flink-shaded-hadoop-3.version}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>xml-apis</groupId>
@@ -643,6 +655,18 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
+    <repositories>
+
+        <repository>
+            <id>maven Repository</id>
+            <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
+        <repository>
+            <id>Cloudera Repository</id>
+            <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+        </repository>
+    </repositories>
 
     <build>
 

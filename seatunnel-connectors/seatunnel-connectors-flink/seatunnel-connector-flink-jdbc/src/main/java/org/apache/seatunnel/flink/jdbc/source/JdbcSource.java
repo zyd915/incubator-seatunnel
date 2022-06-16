@@ -38,6 +38,7 @@ import org.apache.seatunnel.common.config.CheckResult;
 import org.apache.seatunnel.flink.BaseFlinkSource;
 import org.apache.seatunnel.flink.FlinkEnvironment;
 import org.apache.seatunnel.flink.batch.FlinkBatchSource;
+import org.apache.seatunnel.flink.jdbc.input.ClickHouseTypeInformationMap;
 import org.apache.seatunnel.flink.jdbc.input.DefaultTypeInformationMap;
 import org.apache.seatunnel.flink.jdbc.input.HiveTypeInformationMap;
 import org.apache.seatunnel.flink.jdbc.input.JdbcInputFormat;
@@ -250,6 +251,8 @@ public class JdbcSource implements FlinkBatchSource {
             return new OracleTypeInformationMap();
         } else if (StringUtils.containsIgnoreCase(databaseDialect, "Hive")){
             return new HiveTypeInformationMap();
+        } else if (StringUtils.containsIgnoreCase(databaseDialect, "clickhouse")){
+            return new ClickHouseTypeInformationMap();
         } else {
             return new DefaultTypeInformationMap();
         }

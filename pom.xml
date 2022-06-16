@@ -25,7 +25,7 @@
     <groupId>org.apache.seatunnel</groupId>
     <artifactId>seatunnel</artifactId>
     <packaging>pom</packaging>
-    <version>2.1.3-SNAPSHOT</version>
+    <version>${revision}</version>
 
     <name>SeaTunnel</name>
 
@@ -86,7 +86,7 @@
     </modules>
 
     <properties>
-        <revision>2.1.2-SNAPSHOT</revision>
+        <revision>2.1.2</revision>
         <seatunnel.config.shade.version>2.1.1</seatunnel.config.shade.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
@@ -130,7 +130,7 @@
         <flink-shaded-hadoop-3.version>3.1.1.7.0.3.0-79-7.0</flink-shaded-hadoop-3.version>
         <parquet-avro.version>1.10.0</parquet-avro.version>
         <elasticsearch-spark.version>6.8.3</elasticsearch-spark.version>
-        <clickhouse-jdbc.version>0.2</clickhouse-jdbc.version>
+        <clickhouse-jdbc.version>0.3.1</clickhouse-jdbc.version>
         <hbase-spark.version>1.0.0</hbase-spark.version>
         <kudu-spark.version>1.7.0</kudu-spark.version>
         <mongo-spark.version>2.2.0</mongo-spark.version>

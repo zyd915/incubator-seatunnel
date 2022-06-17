@@ -30,5 +30,6 @@
     <module>flink-sql-connector-elasticsearch-6</module>
     <module>flink-sql-connector-elasticsearch-7</module>
     <module>flink-sql-connector-clickhouse</module>
+    <module>flink-sql-connector-hive</module>
   </modules>
 </project>
